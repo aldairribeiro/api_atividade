@@ -10,13 +10,13 @@ def insere_pessoas():
 def consulta_pessoas():
     pessoas = Pessoas.query.all()
     print(pessoas)
-    pessoa = Pessoas.query.filter_by(nome='aldair').first()
+    pessoa = Pessoas.query.filter_by(nome='Aldair').first()
     print(pessoa.idade)
 
 # Altera dados na tabela pessoa
 def altera_pessoa():
-    pessoa = Pessoas.query.filter_by(nome='aldair').first()
-    pessoa.nome = 'aldair'
+    pessoa = Pessoas.query.filter_by(nome='Caio').first()
+    pessoa.nome = 'roger'
     pessoa.save()
 
 # Exclui dados na tabela pessoa
@@ -34,7 +34,7 @@ def consulta_todos_usuarios():
 
 if __name__ == '__main__':
     insere_usuario('aldair', '1234')
-    insere_usuario('ribeiro', '4321')
+    insere_usuario('roger', '4321')
     consulta_todos_usuarios()
     #insere_pessoas()
     #altera_pessoa()
